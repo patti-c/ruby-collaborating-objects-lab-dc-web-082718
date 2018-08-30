@@ -14,7 +14,10 @@ class Song
   end
 
   def self.file_formatter(file)
+    # First, chomps .mp3 off the end of the file
     chomped = file.chomp('.mp3')
+    # Then splits into an array of usable data.
+    # Format: artist - title - genre
     formatted_file = chomped.split(' - ')
   end
 
